@@ -27,7 +27,7 @@ The consumer snap's snapcraft.yaml must define a counterpart plug for connection
 ```yaml
 plugs:
   hunspell-dictionaries-plug:
-    content: hunspell-dictionaries
+    content: hunspell-dictionaries-1-3-1604
     interface: content
     target: $SNAP/usr/share/hunspell
     default-provider: hunspell-dictionaries
@@ -40,7 +40,7 @@ Then do the regular things, except connecting the plug to `hunspell-dictionaries
     
     # Connect the Snap to the Mandatory Interface #
     ## hunspell-dictionaries: Providing hunspell dictionaries at $SNAP/usr/share/hunspell ##
-    sudo snap connect _consumer_snap_name_:hunspell-dictionaries-plug hunspell-dictionaries:hunspell-dictionaries
+    sudo snap connect _consumer_snap_name_:hunspell-dictionaries-plug hunspell-dictionaries:hunspell-dictionaries-1-3-1604
 
 ## What is Working
 * Spellchecking in consumer snap (locale tested: fr_FR)

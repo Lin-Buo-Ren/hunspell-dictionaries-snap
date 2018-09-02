@@ -34,8 +34,12 @@ grade: stable
 icon: snap/gui/icon.png
 
 slots:
-  hunspell-dictionaries:
-    content: hunspell-dictionaries
+  # NOTE:
+  #   Versioning scheme: Hunspell library major+minor version from Ubuntu archive +  Ubuntu software archive release version
+  #   Not all dictionaries come from libreoffice-dictionaries, just most of them, thus not using its version
+  #   We assume all dictionaries shipped in this Ubuntu release are compatible with the accompanied Hunspell library
+  hunspell-dictionaries-1-3-1604:
+    content: hunspell-dictionaries-1-3-1604
     interface: content
     read:
     - $SNAP/usr/share/hunspell
