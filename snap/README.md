@@ -21,17 +21,26 @@ Refer [The content interface - doc - snapcraft.io](https://forum.snapcraft.io/t/
 
 Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters
 
-## Installation
-([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
+## How to Use ##
+The consumer snap's snapcraft.yaml must define a counterpart plug for connection:
 
-### In Terminal
+```yaml
+plugs:
+  hunspell-dictionaries-plug:
+    content: hunspell-dictionaries
+    interface: content
+    target: $SNAP/usr/share/hunspell
+    default-provider: hunspell-dictionaries:hunspell-dictionaries
+```
+
+Then do the regular things, except connecting the plug to `hunspell-dictionaries` snap's `hunspell-dictionaries` slot:
+
     # Install Snap #
-    sudo snap install --channel=beta hunspell-dictionaries
-    #sudo snap install hunspell-dictionaries
+    sudo snap install hunspell-dictionaries
     
     # Connect the Snap to the Mandatory Interface #
     ## hunspell-dictionaries: Providing hunspell dictionaries at $SNAP/usr/share/hunspell ##
-    sudo snap connect _consumer_snap_name_:_plug_name_ hunspell-dictionaries:hunspell-dictionaries
+    sudo snap connect _consumer_snap_name_:hunspell-dictionaries-plug hunspell-dictionaries:hunspell-dictionaries
 
 ## What is Working
 * Spellchecking in consumer snap (locale tested: fr_FR)
