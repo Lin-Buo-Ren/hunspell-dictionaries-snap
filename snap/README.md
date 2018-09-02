@@ -33,7 +33,7 @@ plugs:
     default-provider: hunspell-dictionaries
 ```
 
-Then do the regular things, except connecting the plug to `hunspell-dictionaries` snap's `hunspell-dictionaries` slot:
+Then do the regular things, except connecting the plug to `hunspell-dictionaries` snap's `hunspell-dictionaries-1-3-1604` slot:
 
     # Install Snap #
     sudo snap install hunspell-dictionaries
