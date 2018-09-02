@@ -29,7 +29,7 @@ version-script: ./snap/utilities/set-snap-version.bash
 
 confinement: devmode # use 'strict' once you have the right plugs and slots
 grade: devel
-icon: snap/gui/my-awesome-app.png
+icon: snap/gui/icon.png
 
 apps:
   # If the my-app-name is identical with the my-awesome-app it can be directly run
