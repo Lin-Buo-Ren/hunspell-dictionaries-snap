@@ -30,7 +30,7 @@ version: determined-by-version-script
 version-script: ./snap/utilities/set-snap-version.bash
 
 confinement: strict
-grade: devel
+grade: stable
 icon: snap/gui/icon.png
 
 slots:
