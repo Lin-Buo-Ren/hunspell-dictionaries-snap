@@ -37,7 +37,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - If the upstream rejects the PR:
     - [ ] Ask a [Snapcrafters admin](https://github.com/orgs/snapcrafters/people?query=%20role%3Aowner) to fork your repo into github.com/snapcrafters, transfer the snap name from you to snapcrafters, and configure the repo for automatic publishing into edge on commit
 
-* [ ] Ask a [Snapcrafters admin](https://github.com/orgs/snapcrafters/people?query=%20role%3Aowner) to fork your repo into github.com/snapcrafters, transfer the snap name from you to snapcrafters, and configure the repo for automatic publishing into edge on commit
+* [x] Ask a [Snapcrafters admin](https://github.com/orgs/snapcrafters/people?query=%20role%3Aowner) to fork your repo into github.com/snapcrafters, transfer the snap name from you to snapcrafters, and configure the repo for automatic publishing into edge on commit - [link](https://forum.snapcraft.io/t/pleaes-transfer-hunspell-dictionaries-to-snapcrafters/7166)
 * [ ] (Skipped, no celebration required for content snaps)Ask the Snap Advocacy team to celebrate the snap - [link]()
 
 If you have any questions, [post in the Snapcraft forum](https://forum.snapcraft.io).
