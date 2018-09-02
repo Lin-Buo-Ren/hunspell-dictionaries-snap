@@ -88,10 +88,10 @@ parts:
 
     filesets:
       hunspell-dictionaries:
-        - usr/share/hunspell/*
+      - usr/share/hunspell
       myspell-dictionaries:
-        - usr/share/myspell/*
+      - usr/share/myspell
     stage:
-      - $hunspell-dictionaries
+    - $hunspell-dictionaries
     prime:
-      - $hunspell-dictionaries
+    - $hunspell-dictionaries
