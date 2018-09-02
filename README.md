@@ -12,12 +12,12 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [x] Update logos and references to `[Project]` and `[my-snap-name]` in `README.md`, `snap/snapcraft.yaml`, and `snap/README.md`
 - [x] Add upstream contact information to this `README.md`
 - [x] Create a snap that runs in `devmode`
-- [ ] Add a screenshot to `snap/README.md`
-- [ ] Register the snap in the store, **using the preferred upstream name**(i.e. without custom postfix).  If the preferred upstream name is not available or reserved, [file a request to take over the preferred upstream name](https://dashboard.snapcraft.io/register-snap) and temporary use a name with personal postfix instead.
-- [ ] Setup [build.snapcraft.io](https://build.snapcraft.io) and publish the `devmode` snap in the Snap store edge channel
-- [ ] Add the provided Snapcraft build badge to `snap/README.md`
-- [ ] Add install instructions to `snap/README.md`
-- [ ] Update snap store metadata, icons and screenshots
+- [ ] (Skipped, no screenshot is possible)Add a screenshot to `snap/README.md`
+- [x] Register the snap in the store, **using the preferred upstream name**(i.e. without custom postfix).  If the preferred upstream name is not available or reserved, [file a request to take over the preferred upstream name](https://dashboard.snapcraft.io/register-snap) and temporary use a name with personal postfix instead.
+- [x] Setup [build.snapcraft.io](https://build.snapcraft.io) and publish the `devmode` snap in the Snap store edge channel
+- [x] Add the provided Snapcraft build badge to `snap/README.md`
+- [x] Add install instructions to `snap/README.md`
+- [x] Update snap store metadata, icons and screenshots
 - [ ] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate and let the upstream acknowledge the effort - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Intent-To-Package-Template) - [link]()
 - [ ] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
 - [ ] Publish the confined snap in the Snap store beta channel

@@ -7,9 +7,7 @@
 
 **This is the unofficial snap for Hunspell Dictionaries**, *"Dictionaries for the most popular spellchecking library"*. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.
 
-<!-- Uncomment and modify this when you are provided a build status badge
 [![Build Status Badge of the `hunspell-dictionaries` Snap](https://build.snapcraft.io/badge/Lin-Buo-Ren/hunspell-dictionaries-snap.svg "Build Status of the `hunspell-dictionaries` snap")](https://build.snapcraft.io/user/Lin-Buo-Ren/hunspell-dictionaries-snap)
--->
 
 <!-- Uncomment and modify this when you have a screenshot
 ![Screenshot of the Snapped Application](screenshots/screenshot.png "Screenshot of the Snapped Application")
@@ -17,7 +15,6 @@
 
 Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters
 
-<!--
 ## Installation
 ([Don't have snapd installed?](https://snapcraft.io/docs/core/install))
 
@@ -27,17 +24,13 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
     #sudo snap install --channel=beta hunspell-dictionaries
     #sudo snap install hunspell-dictionaries
     
-    # Connect the Snap to Required Interfaces #
-    ## _plug_name_: Reasoning of connecting _plug_name_ ##
-    sudo snap connect hunspell-dictionaries:_plug_name_
+    # Connect the Snap to the Mandatory Interface #
+    ## hunspell-dictionaries: Providing hunspell dictionaries at $SNAP/usr/share/hunspell ##
+    sudo snap connect _consumer_snap_name_:_plug_name_ hunspell-dictionaries:hunspell-dictionaries
     
-    # Connect the Snap to Optional Interfaces #
-    ## _plug_name_: Reasoning of connecting _plug_name_ ##
-    sudo snap connect hunspell-dictionaries:_plug_name_
-
-### The Graphical Way
-Browse <https://snapcraft.io/hunspell-dictionaries> and follow the instructions.
--->
+    # Connect the Snap to the Optional Interfaces #
+    ## hunspell-launcher: Providing a launcher that sets the DICPATH environmental variable, for application that is not relocatable ##
+    sudo snap connect _consumer_snap_name_:_plug_name_ hunspell-dictionaries:hunspell-launcher
 
 <!--
 ## What is Working
