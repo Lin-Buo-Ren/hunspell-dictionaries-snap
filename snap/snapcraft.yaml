@@ -93,5 +93,7 @@ parts:
       - usr/share/myspell
     stage:
     - $hunspell-dictionaries
+    #- $myspell-dictionaries
     prime:
     - $hunspell-dictionaries
+    #- $myspell-dictionaries
