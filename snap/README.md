@@ -28,16 +28,16 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
     ## hunspell-dictionaries: Providing hunspell dictionaries at $SNAP/usr/share/hunspell ##
     sudo snap connect _consumer_snap_name_:_plug_name_ hunspell-dictionaries:hunspell-dictionaries
 
-<!--
 ## What is Working
-* [A list of functionallities that are verified working]
+* Spellchecking in consumer snap (locale tested: fr_FR)
 
 ## What is NOT Working...yet 
-* [A list of functionallities that are verified not working]
+* Nothing as of now.
 
 ## What is NOT Tested...yet
-* [A list of functionallities that are not tested for any reasons.]
--->
+* The launcher script that sets the DICPATH environmental variable (no known snaps depend on it yet.)
+
+... and everything not listed in the "What is Working" section.
 
 ## Support
 * Report issues regarding using this snap to the issue tracker:  
