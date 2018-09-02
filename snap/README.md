@@ -20,8 +20,7 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
 
 ### In Terminal
     # Install Snap #
-    sudo snap install --channel=edge --devmode hunspell-dictionaries
-    #sudo snap install --channel=beta hunspell-dictionaries
+    sudo snap install --channel=beta hunspell-dictionaries
     #sudo snap install hunspell-dictionaries
     
     # Connect the Snap to the Mandatory Interface #

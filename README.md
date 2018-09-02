@@ -19,9 +19,9 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [x] Add install instructions to `snap/README.md`
 - [x] Update snap store metadata, icons and screenshots
 - [x] File an Intent-To-Package issue/bug to the upstream's contact or issue/bug tracker to consolidate and let the upstream acknowledge the effort - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Intent-To-Package-Template) - [link](https://forum.snapcraft.io/t/intent-to-package-hunspell-dictionaries-content-snap/7154)
-- [ ] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
-- [ ] Publish the confined snap in the Snap store beta channel
-- [ ] Update the install instructions in `snap/README.md`
+- [x] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
+- [x] Publish the confined snap in the Snap store beta channel
+- [x] Update the install instructions in `snap/README.md`
 - [ ] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
 - [ ] Publish the snap in the Snap store stable channel
 - [ ] Update the install instructions in `snap/README.md`
