@@ -33,12 +33,13 @@ icon: snap/gui/icon.png
 
 slots:
   hunspell-dictionaries:
+    content: hunspell-dictionaries
     interface: content
     read:
     - $SNAP/usr/share/hunspell
-    - $SNAP/usr/share/myspell
 
   hunspell-launchers:
+    content: hunspell-launchers
     interface: content
     read:
     - $SNAP/bin
