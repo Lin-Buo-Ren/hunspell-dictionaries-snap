@@ -29,7 +29,7 @@ description: |
 version: determined-by-version-script
 version-script: ./snap/utilities/set-snap-version.bash
 
-confinement: devmode # use 'strict' once you have the right plugs and slots
+confinement: strict
 grade: devel
 icon: snap/gui/icon.png
 
