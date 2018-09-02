@@ -27,10 +27,6 @@ Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.
     # Connect the Snap to the Mandatory Interface #
     ## hunspell-dictionaries: Providing hunspell dictionaries at $SNAP/usr/share/hunspell ##
     sudo snap connect _consumer_snap_name_:_plug_name_ hunspell-dictionaries:hunspell-dictionaries
-    
-    # Connect the Snap to the Optional Interfaces #
-    ## hunspell-launcher: Providing a launcher that sets the DICPATH environmental variable, for application that is not relocatable ##
-    sudo snap connect _consumer_snap_name_:_plug_name_ hunspell-dictionaries:hunspell-launcher
 
 <!--
 ## What is Working

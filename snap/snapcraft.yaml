@@ -40,12 +40,6 @@ slots:
     read:
     - $SNAP/usr/share/hunspell
 
-  hunspell-launchers:
-    content: hunspell-launchers
-    interface: content
-    read:
-    - $SNAP/bin
-
 parts:
   # Assets from the snap packaging, refer each READMEs under the `snap` folder for more information
   assets:
