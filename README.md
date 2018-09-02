@@ -22,7 +22,7 @@ Snapcrafters ([join us](https://forum.snapcraft.io/t/join-snapcrafters/1325)) ar
 - [x] Convert the snap to `strict` confinement, or `classic` confinement if it qualifies
 - [x] Publish the confined snap in the Snap store beta channel
 - [x] Update the install instructions in `snap/README.md`
-- [ ] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link]()
+- [x] Post a call for testing on the [Snapcraft Forum](https://forum.snapcraft.io) - [link](https://forum.snapcraft.io/t/call-for-testing-the-hunspell-dictionaries-content-snap/7155)
 - [ ] Publish the snap in the Snap store stable channel
 - [ ] Update the install instructions in `snap/README.md`
 - [ ] Post an announcement in the [Snapcraft Forum](https://forum.snapcraft.io) - [template](https://github.com/Lin-Buo-Ren/snapcrafters-template-plus/wiki/Release-Announcement-Template) - [link]()
