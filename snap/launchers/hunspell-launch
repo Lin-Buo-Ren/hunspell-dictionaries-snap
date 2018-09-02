@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# This is a launcher for setting the proper location of the Hunspell dictionaries
+# 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com> © 2018
+
+set \
+	-o errexit \
+	-o errtrace \
+	-o nounset \
+	-o pipefail
+
+# FIXME: $SNAP/usr/share/myspell also needs to be set but DICPATH only supports 1 PATH!
+# https://github.com/vslavik/poedit/pull/468#issuecomment-394259732
+declare \
+	DICPATH="${SNAP}"/usr/share/hunspell
+
+export \
+	DICPATH
+
+exec "${@}"
