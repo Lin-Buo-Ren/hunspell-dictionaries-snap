@@ -10,10 +10,26 @@ set \
 
 init(){
 	local \
-		upstream_version \
+		libhunspell_version \
+		ubuntu_version \
 		packaging_revision
 
-	upstream_version=u16.04-"$(date +%Y%m%d)"
+	libhunspell_version="$(
+		# 1. Library package
+		# 2. Library package line
+		# 3. Package name
+		# 4. Major-minor version string
+		apt search '^libhunspell.*[0-9]$' 2>/dev/null \
+			| grep '^libhunspell' \
+			| cut --delimiter=/ --fields=1 \
+			| cut --delimiter=- --fields=2
+	)"
+
+	ubuntu_version="$(
+		lsb_release \
+			--release \
+			--short
+	)"
 
 	packaging_revision="$(
 		git \
@@ -27,7 +43,7 @@ init(){
 	printf \
 		-- \
 		'%s' \
-		"${upstream_version}+pkg-${packaging_revision}"
+		"${libhunspell_version}"-"${ubuntu_version}"+pkg-"${packaging_revision}"
 
 	exit 0
 }
