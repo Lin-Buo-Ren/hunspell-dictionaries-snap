@@ -24,44 +24,8 @@ description: |
   Refer "The content interface - doc - snapcraft.io" topic for information of using this snap:
   https://forum.snapcraft.io/t/the-content-interface/1074/1
 
-# Just for humans, typically '1.2+git' or '1.3.2'
-# The wrapping single quotes are often required to avoid the version string
-# being accidentally interpreted as a YAML floating point number(like '1.2').
-# http://yaml.org/spec/1.2/spec.html#id2804092
-# https://arp242.net/weblog/yaml_probably_not_so_great_after_all.html#surprising-behaviour
 version: determined-by-version-script
-
-# (OPTIONAL) The version string can also be dynamically determined via scripting
-# , in this case the value of the `version` key will be ignored (but the key is
-# still required).
-# NOTE: The resulting version string cannot be longer than 32 characters
-#version-script: snap/utilites/set-snap-version.bash
-#version-script: git -C parts/my-app-part/src describe --always --dirty --tags
-version-script: |
-  set \
-    -o errexit \
-    -o nounset
-
-  upstream_version="$(
-    git \
-      -C parts/my-app-part/src \
-      describe \
-      --always \
-      --dirty=-d \
-      --tags \
-    | sed s/^v//
-  )"
-
-  packaging_revision="$(
-    git \
-      describe \
-      --abbrev=4 \
-      --always \
-      --match nothing \
-      --dirty=-d
-  )"
-
-  printf -- '%s' "${upstream_version}+pkg-${packaging_revision}"
+version-script: ./snap/utilities/set-snap-version.bash
 
 confinement: devmode # use 'strict' once you have the right plugs and slots
 grade: devel
