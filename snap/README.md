@@ -30,7 +30,7 @@ plugs:
     content: hunspell-dictionaries
     interface: content
     target: $SNAP/usr/share/hunspell
-    default-provider: hunspell-dictionaries:hunspell-dictionaries
+    default-provider: hunspell-dictionaries
 ```
 
 Then do the regular things, except connecting the plug to `hunspell-dictionaries` snap's `hunspell-dictionaries` slot:
