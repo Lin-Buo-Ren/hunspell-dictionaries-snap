@@ -51,6 +51,10 @@ parts:
     source-type: local
     plugin: nil
 
+    build-packages:
+    # Used in snap/utilities/set-snap-version.bash
+    - lsb-release
+
     override-build: |
       set \
         -o errexit \
