@@ -1,4 +1,4 @@
-%YAML 1.2
+%YAML 1.1
 ---
 # Snapcraft Recipe for Hunspell Dictionaries
 # ------------------------------
@@ -16,7 +16,7 @@
 # For support refer to the snapcraft section in the Snapcraft Forum:
 # https://forum.snapcraft.io/c/snapcraft
 
-name: hunspell-dictionaries
+name: hunspell-dictionaries-1-3-1604
 summary: Dictionaries for the most popular spellchecking library
 description: |
   This is a content-shared snap for snaps that depend on the Hunspell spellchecking dictionaries.
@@ -26,12 +26,11 @@ description: |
   Refer "The content interface - doc - snapcraft.io" topic for information of using this snap:
   https://forum.snapcraft.io/t/the-content-interface/1074/1
 
-version: determined-by-version-script
-version-script: ./snap/utilities/set-snap-version.bash
-
+adopt-info: hunspell-dictionaries
 confinement: strict
 grade: stable
 icon: snap/gui/icon.png
+base: core
 
 slots:
   # NOTE:
@@ -42,34 +41,34 @@ slots:
     content: hunspell-dictionaries-1-3-1604
     interface: content
     read:
-    - $SNAP/usr/share/hunspell
+      - $SNAP/usr/share/hunspell
 
 parts:
-  # Assets from the snap packaging, refer each READMEs under the `snap` folder for more information
-  assets:
-    source: snap
-    source-type: local
-    plugin: nil
-
-    build-packages:
-    # Used in snap/utilities/set-snap-version.bash
-    - lsb-release
-
-    override-build: |
-      set \
-        -o errexit \
-        -o nounset
-
-      ./utilities/install-assets.bash
+  scriptlets:
+    source: snap/local/scriptlets
+    plugin: dump
+    organize:
+      '*': scriptlets/
     prime:
-    - -utilities
-    - -patches
+      - -*
 
-  spellcheck-dictionaries:
+  hunspell-dictionaries:
+    build-packages:
+      # for the set-snap-version scriptlet
+      - try:
+        - git
+      - else:
+        - git-core
+      - lsb-release
+
+    after:
+      - scriptlets
+    override-pull: |
+      set -eu
+
+      "${SNAPCRAFT_STAGE}"/scriptlets/set-snap-version.bash
+
     plugin: nil
-    # Poedit sources will be used when `source` is ommitted, avoid this
-    # behavior
-    override-pull: 'true'
     override-build: |
       set -eu
 
@@ -89,20 +88,16 @@ parts:
           --max-args=1 \
           --replace={} \
           --verbose \
-          dpkg-deb --extract {} ../install
+          dpkg-deb --extract {} "${SNAPCRAFT_PART_INSTALL}"
 
     filesets:
       copyright:
       - usr/share/doc/*/copyright
       hunspell-dictionaries:
       - usr/share/hunspell
-      myspell-dictionaries:
-      - usr/share/myspell
     stage:
-    - $copyright
-    - $hunspell-dictionaries
-    #- $myspell-dictionaries
+      - $copyright
+      - $hunspell-dictionaries
     prime:
-    - $copyright
-    - $hunspell-dictionaries
-    #- $myspell-dictionaries
+      - $copyright
+      - $hunspell-dictionaries
