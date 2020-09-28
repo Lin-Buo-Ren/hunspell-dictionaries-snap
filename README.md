@@ -1,4 +1,6 @@
 # Unofficial Snap Packaging for Hunspell Dictionaries
+> OBSOLETED: Moved to https://launchpad.net/hunspell-dictionaries-snaps
+
 This is the unofficial snap packaging for [Hunspell Dictionaries](https://wiki.documentfoundation.org/Language_support_of_LibreOffice), [Snaps are universal Linux packages](https://snapcraft.io).
 
 Refer [snap/README.md](snap/README.md) for user-oriented information.
